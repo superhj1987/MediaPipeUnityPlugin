@@ -254,6 +254,7 @@ jobs:
       #     path: Packages/com.github.homuler.mediapipe/Runtime/Plugins
 
       - name: Remove unused meta files
+        continue-on-error: true
         run: |
           cd Packages/com.github.homuler.mediapipe/Runtime/Plugins
           rm libmediapipe_c.bc.meta
