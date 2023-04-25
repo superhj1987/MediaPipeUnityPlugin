@@ -257,7 +257,7 @@ jobs:
         continue-on-error: true
         run: |
           cd Packages/com.github.homuler.mediapipe/Runtime/Plugins
-          rm libmediapipe_c.bc.meta
+          # rm libmediapipe_c.bc.meta
           rm libopencv_world.*.meta
           rm opencv_world*.dll.meta
 
@@ -265,16 +265,16 @@ jobs:
         run: |
           zip -r MediaPipeUnityPlugin-all.zip . -x .git/**\*
 
-      - name: Export tarball
-        run: |
-          cd Packages/com.github.homuler.mediapipe
-          npm pack
-          mv com.github.homuler.mediapipe-*.tgz ../..
+      # - name: Export tarball
+      #   run: |
+      #     cd Packages/com.github.homuler.mediapipe
+      #     npm pack
+      #     mv com.github.homuler.mediapipe-*.tgz ../..
 
-      - name: Export unitypackage
-        if: ${{ env.BUILD_UNITYPACKAGE == '1' }}
-        run: |
-          unity-editor -quit -batchmode -nographics -silent-crashes -logFile -projectPath . -executeMethod PackageExporter.Export
+      # - name: Export unitypackage
+      #   if: ${{ env.BUILD_UNITYPACKAGE == '1' }}
+      #   run: |
+      #     unity-editor -quit -batchmode -nographics -silent-crashes -logFile -projectPath . -executeMethod PackageExporter.Export
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
