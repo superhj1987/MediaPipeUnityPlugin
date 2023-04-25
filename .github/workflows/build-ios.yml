@@ -8,9 +8,9 @@ on:
       # linuxBuildArgs:
       #   type: string
       #   description: Build options for Linux Build
-      androidBuildArgs:
-        type: string
-        description: Build options for Android Build
+      # androidBuildArgs:
+      #   type: string
+      #   description: Build options for Android Build
       # macosBuildArgs:
       #   type: string
       #   description: Build options for macOS Build
@@ -30,7 +30,7 @@ jobs:
       packageName: package
       bazelBuildArgs: ${{ inputs.bazelBuildArgs || '--experimental_scale_timeouts=10.0 --http_timeout_scaling=10.0' }}
       # linuxBuildArgs: ${{ inputs.linuxBuildArgs || '--desktop gpu --opencv cmake' }}
-      androidBuildArgs: ${{ inputs.androidBuildArgs || '--android fat --android_ndk_api_level 21 --linkopt=-s' }}
+      # androidBuildArgs: ${{ inputs.androidBuildArgs || '--android fat --android_ndk_api_level 21 --linkopt=-s' }}
       # macosBuildArgs: ${{ inputs.macosBuildArgs || '--desktop cpu --opencv cmake --macos_universal' }}
       iosBuildArgs: ${{ inputs.iosBuildArgs || '--ios arm64 --linkopt=-s' }}
       # windowsBuildArgs: ${{ inputs.windowsBuildArgs || '--desktop cpu --opencv cmake' }}
