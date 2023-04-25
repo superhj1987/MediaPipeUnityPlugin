@@ -1,4 +1,4 @@
-name: Build a Package
+name: Build Mobile
 on:
   workflow_dispatch:
     inputs:
