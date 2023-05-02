@@ -1,5 +1,4 @@
-Glarity SummaryGlarity Summary
-name: Package-Android
+name: Package Android
 on:
   workflow_call:
     inputs:
