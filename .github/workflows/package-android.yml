@@ -42,7 +42,7 @@ jobs:
         run: |
           echo 'inputs.ref=${{ inputs.ref }}'
           echo 'inputs.bazelBuildArgs=${{ inputs.bazelBuildArgs }}'
-          echo 'inputs.iosBuildArgs=${{ inputs.iosBuildArgs }}'
+          echo 'inputs.androidBuildArgs=${{ inputs.androidBuildArgs }}'
 
   # linux-build:
   #   runs-on: ubuntu-latest
