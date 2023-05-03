@@ -297,10 +297,10 @@ jobs:
           name: ${{ inputs.packageName }}-base
           failOnError: false
 
-      # - uses: geekyeggo/delete-artifact@v2
-      #   with:
-      #     name: ${{ inputs.packageName }}-mediapipe_android.aar
-      #     failOnError: false
+      - uses: geekyeggo/delete-artifact@v2
+        with:
+          name: ${{ inputs.packageName }}-mediapipe_android.aar
+          failOnError: false
 
       # - uses: geekyeggo/delete-artifact@v2
       #   with:
